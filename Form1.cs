@@ -13,7 +13,7 @@ using System.Runtime.InteropServices;
 namespace Unity_GUID_Remapper_hxrmn
 {
  
-    public partial class Form1 : Form
+    public partial class Main : Form
     {
         [DllImport("kernel32")]
         static extern int AllocConsole();
@@ -23,7 +23,7 @@ namespace Unity_GUID_Remapper_hxrmn
         public string goodGUID = "f4688fdb7df04437aeb418b961361dc5";
         public string relativeBadTMPpath = @"\Assets\Scripts\Unity.TextMeshPro\TMPro\TextMeshProUGUI.cs.meta";
 
-        public Form1()
+        public Main()
         {
             InitializeComponent();
         }

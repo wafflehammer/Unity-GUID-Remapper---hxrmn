@@ -16,7 +16,7 @@ namespace Unity_GUID_Remapper_hxrmn
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new Main());
         }
     }
 }

@@ -117,4 +117,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="richTextBox1.Text" xml:space="preserve">
+    <value>Steps: First locate the games root directory (the one with the launcher/exe in it).  Next select the class that you want to be remapped (for instance, assets/scripts/tmpro/textmeshpro_uguid.cs).  Next Select the class you want to remap it to (for instance /Packages/Library/TMPro/TextMeshPro_UGUID.cs).  Then select options (fix prefabs and scenes is usually good enough).  Then hit the big replace button and you are good to go!</value>
+  </data>
 </root>
