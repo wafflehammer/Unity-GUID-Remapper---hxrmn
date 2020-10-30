@@ -260,6 +260,7 @@
             this.Controls.Add(this.button2);
             this.Name = "advanced";
             this.Text = "advanced";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.advanced_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 

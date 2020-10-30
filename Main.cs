@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 using System.Runtime.InteropServices;
@@ -22,7 +15,7 @@ namespace Unity_GUID_Remapper_hxrmn
         public string badGUID = "5dad5f9bb6e488d4f903ead617483c85";
         public string goodGUID = "f4688fdb7df04437aeb418b961361dc5";
         public string relativeBadTMPpath = @"\Assets\Scripts\Unity.TextMeshPro\TMPro\TextMeshProUGUI.cs.meta";
-
+        public string relativeGoodTMPpath = @"\Library\PackageCache\com.unity.textmeshpro@3.0.1\Scripts\Runtime";
         public Main()
         {
             InitializeComponent();
@@ -135,7 +128,7 @@ namespace Unity_GUID_Remapper_hxrmn
         {
             advanced advanced = new advanced();
             advanced.Show();
-            this.Hide();
+        
         }
     }
 }
