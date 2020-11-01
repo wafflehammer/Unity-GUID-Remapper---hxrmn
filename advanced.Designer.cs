@@ -30,10 +30,10 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(advanced));
             this.button2 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.badGUIDTextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.goodGUIDTextBox = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.checkbox_fixScenes = new System.Windows.Forms.CheckBox();
             this.checkbox_fixPrefabs = new System.Windows.Forms.CheckBox();
@@ -44,7 +44,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.gamePathTextBox = new System.Windows.Forms.TextBox();
             this.checkbox_FixScriptableObjects = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
@@ -63,13 +63,13 @@
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // textBox1
+            // badGUIDTextBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(354, 79);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(384, 20);
-            this.textBox1.TabIndex = 8;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.badGUIDTextBox.Location = new System.Drawing.Point(354, 79);
+            this.badGUIDTextBox.Name = "badGUIDTextBox";
+            this.badGUIDTextBox.Size = new System.Drawing.Size(384, 20);
+            this.badGUIDTextBox.TabIndex = 8;
+            this.badGUIDTextBox.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label1
             // 
@@ -89,13 +89,13 @@
             this.label2.TabIndex = 12;
             this.label2.Text = "Good GUID To Use Instead";
             // 
-            // textBox2
+            // goodGUIDTextBox
             // 
-            this.textBox2.Location = new System.Drawing.Point(354, 154);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(384, 20);
-            this.textBox2.TabIndex = 11;
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.goodGUIDTextBox.Location = new System.Drawing.Point(354, 154);
+            this.goodGUIDTextBox.Name = "goodGUIDTextBox";
+            this.goodGUIDTextBox.Size = new System.Drawing.Size(384, 20);
+            this.goodGUIDTextBox.TabIndex = 11;
+            this.goodGUIDTextBox.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // button1
             // 
@@ -216,13 +216,13 @@
             this.label4.TabIndex = 22;
             this.label4.Text = "Game Directory:";
             // 
-            // textBox3
+            // gamePathTextBox
             // 
-            this.textBox3.Location = new System.Drawing.Point(354, 18);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(384, 20);
-            this.textBox3.TabIndex = 21;
-            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
+            this.gamePathTextBox.Location = new System.Drawing.Point(354, 18);
+            this.gamePathTextBox.Name = "gamePathTextBox";
+            this.gamePathTextBox.Size = new System.Drawing.Size(384, 20);
+            this.gamePathTextBox.TabIndex = 21;
+            this.gamePathTextBox.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // checkbox_FixScriptableObjects
             // 
@@ -243,7 +243,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.checkbox_FixScriptableObjects);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.gamePathTextBox);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.richTextBox1);
@@ -253,10 +253,10 @@
             this.Controls.Add(this.checkbox_DeleteMetaFiles);
             this.Controls.Add(this.checkBox2);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.goodGUIDTextBox);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.badGUIDTextBox);
             this.Controls.Add(this.button2);
             this.Name = "advanced";
             this.Text = "advanced";
@@ -269,10 +269,10 @@
         #endregion
 
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox badGUIDTextBox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox goodGUIDTextBox;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.CheckBox checkbox_fixScenes;
         private System.Windows.Forms.CheckBox checkbox_fixPrefabs;
@@ -283,7 +283,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox gamePathTextBox;
         private System.Windows.Forms.CheckBox checkbox_FixScriptableObjects;
     }
 }

@@ -38,7 +38,7 @@ namespace Unity_GUID_Remapper_hxrmn
                     string badGUIDTextLine = classMetaFile[1];
                     
                     badGUID = badGUIDTextLine.Substring(6);
-                    textBox1.Text = badGUID;
+                    badGUIDTextBox.Text = badGUID;
                 }
                 else
                 {
@@ -63,7 +63,7 @@ namespace Unity_GUID_Remapper_hxrmn
                     string goodGUIDTextLine = classMetaFile[1];
                  
                     goodGUID = goodGUIDTextLine.Substring(6);
-                    textBox2.Text = goodGUID;
+                    goodGUIDTextBox.Text = goodGUID;
                 }
                 else
                 {
@@ -78,6 +78,19 @@ namespace Unity_GUID_Remapper_hxrmn
         private void button3_Click(object sender, EventArgs e)
         {
             try
+            {
+                badGUID = badGUIDTextBox.Text;
+                goodGUID = goodGUIDTextBox.Text;
+                gamePath = gamePathTextBox.Text;
+            }
+            catch(Exception prematureExceptulation)
+            {
+                MessageBox.Show("something went wrong pulling game path, bad GUID, or good GUID (or all 3 if you're really a fuckin athlete here) from the text boxes....figure it out");
+                MessageBox.Show(prematureExceptulation.ToString());
+                return;
+            }
+                
+                try
             {
 
                 if (checkbox_fixPrefabs.Checked)
@@ -203,7 +216,7 @@ namespace Unity_GUID_Remapper_hxrmn
             if (Directory.Exists(folderBrowser.SelectedPath))
             {
                 gamePath = folderBrowser.SelectedPath;
-                textBox3.Text = gamePath;
+                gamePathTextBox.Text = gamePath;
 
             }
         }
@@ -211,7 +224,7 @@ namespace Unity_GUID_Remapper_hxrmn
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            if (textBox1.TextLength == 32 && textBox2.TextLength == 32)
+            if (badGUIDTextBox.TextLength == 32 && goodGUIDTextBox.TextLength == 32)
             {
                 button3.Enabled = true;
 
@@ -220,7 +233,7 @@ namespace Unity_GUID_Remapper_hxrmn
 
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
-            if (textBox1.TextLength == 32 && textBox2.TextLength == 32)
+            if (badGUIDTextBox.TextLength == 32 && goodGUIDTextBox.TextLength == 32)
             {
                 button3.Enabled = true;
 
@@ -229,7 +242,7 @@ namespace Unity_GUID_Remapper_hxrmn
 
         private void textBox3_TextChanged(object sender, EventArgs e)
         {
-            if (Directory.Exists(textBox3.Text))
+            if (Directory.Exists(gamePathTextBox.Text))
             {
                 button1.Enabled = true;
                 button2.Enabled = true;
